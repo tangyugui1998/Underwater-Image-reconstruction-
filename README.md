@@ -6,7 +6,7 @@ This project is the support of article
 
 This project consists of two parts: gray underwater image restoration and color underwater image restoration
 
-How to run?
+How to run? (Matlab2018b)
 
 1.Put all resources in one folder
 
