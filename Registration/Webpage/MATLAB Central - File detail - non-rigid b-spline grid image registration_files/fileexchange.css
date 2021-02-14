@@ -1,0 +1,110 @@
+/* CSS Document */
+
+/*
+# Dark grey (text): #191919
+# MW Head Orange (text): #32373d
+# MLC Head Yellow (text): #cc9900
+# Blue (links) #0053D0
+# */
+
+
+
+
+
+
+.inputfile {position:relative; z-index: 1; background: transparent url(/matlabcentral/images/button_select.gif) no-repeat right top; width:310px; height:30px; display:block; overflow:hidden;}
+.filefield {position:relative; top:-30px;z-index: 1;  width:320px; display:block;}
+.filefield input.text {width:245px; margin-right:0;}
+.fileUpload {
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	-khtml-opacity: 0;
+	margin:0;
+	}
+		
+table.fileview h3 {font-family:Tahoma, Arial, Helvetica, sans-serif;}
+table.fileview {border:1px solid #d6d4d4; color:#191919; background-color:#fff; margin-bottom:8px; margin-top:8px; width:100%; padding:0px;}
+
+table.fileview table.section {border:none; margin:0; padding:0 10px; }
+table.fileview table.section p.info {margin:0!important; padding:0!important;}
+
+table.fileview div.textframe {
+	border: solid 2px #EDEEEF; padding:4px; height:150px; width:460px; overflow-y:auto; overflow-x:hidden;
+}
+table.section th {
+background:#EDEEEF url(../images/tabletools_bgd.gif) repeat-x scroll center bottom;
+border-bottom:1px solid #FFFFFF;
+font-weight:bold;
+padding:3px 6px 4px;
+}
+
+td.label {border-right:none;}
+table.fileview td { padding:3px 6px 3px 6px;}
+table.fileview td.label {font-weight:bold; text-align:right; width:100px; padding-right:6px;}
+table.fileview td.label .heading {padding-top:10px;}
+table.fileview table.section td {padding:3px 12px 0 3px;}
+
+table.fileview tr.bottom td {border-bottom:none; }
+
+table.fileview td.label p.info {font-weight:normal; margin:0;}
+table.fileview td.userratings {width:25%; padding-left:6px; }
+table.fileview td.userratings a.username, table.fileview td.userratings span.date {display:block;}
+
+table.fileview tr.title {height:2em; color:#191919; }
+table.fileview td.title {width:55%; padding:14px 14px 0 14px;  }
+table.fileview td.title p {margin:0;}
+table.fileview td.image {text-align:center; padding:14px 14px 0 14px; }
+table.fileview td.rating {text-align:center; width:auto;padding:14px 14px 0 14px; }
+table.fileviewtop, table.fileviewtop td {border:none; background:#fff; margin:0; }
+table.fileviewtop {width:90%; margin-left:0;}
+table.fileviewtop p {margin:0;}
+
+table.fileview h1 { font-size:12pt; line-height: 14pt; margin-bottom: 6pt; margin-top: 0; margin-left:-.05em; }
+table.fileview tr.addform td.top {border-top:2px solid #edeeef; padding-top:10px;}
+table.fileview table.inlineform td.label {width:23%;}
+
+table.fileview br {
+	line-height:1px;
+	padding:0;
+	margin:0;
+}
+
+#feedback td span.comment {
+display:block;
+width: 400px;
+overflow:hidden;
+word-wrap: break-word;
+white-space:normal;
+}
+#feedbacks_table td span.comment {
+display:block;
+width: 340px;
+overflow:hidden;
+word-wrap: break-word;
+white-space:normal;
+}
+
+#editorsnote {
+border:1px solid #C1C1C1;
+display:block;
+margin-bottom:6px;
+margin-top:12px;
+padding: 6px;
+text-align:left;
+width:250px;
+}
+
+#editorsnote h3 {
+	margin:0; padding:0;
+	padding-right:10px;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	color:#666666;
+}
+
+.maininfo #details #editorsnote p {
+	font-size:95%;
+	font-weight:bold;
+	}
+
+.histogram {width: 174px; height: 210px; border: 0px solid black; position: relative; float: left; margin:10px;}
+.histogram h3 {position: relative; top:-16px;  width: 174px; text-align: center; font-size:14px;}

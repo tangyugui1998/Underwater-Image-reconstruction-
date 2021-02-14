@@ -1,0 +1,21 @@
+html #utility_overlay { width:100%; height:100%; padding:10px; margin:0px; background-color:#000000; position:absolute; top:0px; left:0px; z-index:9999; }
+
+/* MODALS */
+/* Globals */
+#utility_div { width:500px; height:auto; margin-left:-250px; background-color:#fff; text-align:left; border:10px solid #7f8992; position:absolute; top:0%; left:50%; z-index:10000; overflow: auto; }  
+#utility_div #global_actions { margin-bottom:0px; }
+#utility_div strong { font-weight:bold; }
+#utility_div em { font-style:italic; }
+
+
+#utility_overlay iframe {
+display:none;/*sorry for IE5*/
+display/**/:block;/*sorry for IE5*/
+position:absolute;/*must have*/
+top:0;/*must have*/
+left:0;/*must have*/
+z-index:-1;/*must have*/
+filter:mask();/*must have*/
+width: 100%;/*must have for any big value*/
+height: 100%;/*must have for any big value*/;
+}

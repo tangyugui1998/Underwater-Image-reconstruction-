@@ -1,0 +1,770 @@
+/* CSS Document */
+
+
+/*
+# Dark grey (text): #191919
+# MW Head Orange (text): #32373d
+# MLC Head Yellow (text): #cc9900
+# Blue (links) #0053D0
+# */
+
+* {
+    -moz-box-sizing: border-box;
+} 
+* {
+margin:0;
+padding:0;
+}
+html { 
+	height:100%; min-height:100%; margin-bottom:1px;
+	overflow:-moz-scrollbars-vertical;
+	}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+
+body {
+	margin: 0!important; 
+	padding: 0!important; 
+	width: 100%!important; 
+	background: #d9d9d9 url(/matlabcentral/images/pagebgd.gif) center repeat-y!important; 
+	font-size:100%;
+}
+body {
+font-family:Tahoma, Arial, Helvetica, sans-serif;
+color:#121212;
+text-align: center; /* centering the content for IE6 */
+padding-bottom:20px;
+font-size:8pt;
+line-height:20px;
+margin-bottom:0.9em;
+}
+
+
+table{border-collapse:collapse;border-spacing:0; font-size:8pt;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bold;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;}
+sup {font-size:80%;}
+
+strong {font-weight:bold;}
+
+a {color:#0053d0;text-decoration:none; word-wrap: break-word; }
+a:hover {text-decoration:underline;}
+a:visited{color:#355e9b;}
+h2 a:visited{color:#0053d0;}
+.hilight { padding-left:6px; font-weight:bold; font-size:10px; color:#c3c3c3 }
+
+
+/* PAGE STRUCTURE */
+.wrapper {
+display:table; /* must put this in for FireFox. */
+margin:0 auto; /* for IE6 and Firfox centering */
+text-align:left; /* so that IE6 and Firefox puts the text to the left */
+position:relative;
+padding:0;
+width:928px; 
+height:100%;
+overflow:hidden;
+}
+
+.verticalcenter {
+	height:100%; 
+	margin:0; 
+	padding:0;
+}
+
+#colleft {
+float:left;
+width:180px;
+height:100%; /* so the menu has the height of the main content and visa versa */
+padding:0; 
+padding-left:1px;
+}
+
+
+#colright{
+float:right; /* float the menu to the left */
+width:160px;
+height:100%; /* so the menu has the height of the main content and visa versa */
+margin-left:20px;
+padding-right:6px;
+}
+
+.main {
+float:right; /* float the content to the right */
+width:inherit;
+margin:0 auto;
+height:100.1%;/* so the content has the height of the menu and visa versa */
+}
+
+/* for floating sections */
+.left {float:left; margin:0; padding:0; clear:none; }
+.right {float:right; margin:0; padding:0; clear:none; }
+.twoCol {width:49%; padding-left:20px;}
+.oneCol {width:99%;padding-left:20px;}
+.threeCol {width:33%; padding-left:20px;}
+
+#header ol { 	
+		margin: 0;
+		padding: 0;
+		text-indent: 0; 
+		}
+#header a, #header ul li, #header ol li  {font-size:11px;}
+#header ol li 	{ padding:0; margin:0;}
+#header ul, #header ol {font-size:11px; margin-bottom:.9em;}
+#header #search_label {font-size:11px; padding-top:3px;}
+#header form label {font-size:11px; padding-top:3px;}
+#header .wrapper {height:112px;width:928px;z-index:1; }
+
+#header .main {position:relative; width:928px; display:block;}
+
+
+#middle .wrapper { background:transparent url(/matlabcentral/images/topshadow.gif) no-repeat top; height:100.1%; width:927px; overflow:none;  }
+
+#middle .main {position:relative; padding-top:20px;   }
+
+
+#footer {text-align:left; width:100%; display:block; border:none!important; }
+
+div#middle div#footer div.wrapper {
+	padding:0; 
+	margin:0; 
+	padding-bottom:10px; 
+	background:none; 
+	padding-right:20px; 
+	height:80px; 
+	position:relative; 
+	bottom:0; 
+	margin-top:30px;
+	overflow:visible!important;
+	}
+
+
+#footer ul li {background:none;}
+
+
+/* HEADER */
+#header {font-size:11px; color:#FFF; display:block; clear:both; height:112px; background:transparent;}
+#header a, #header a:hover {color:#FFF; text-decoration:none;}
+#header ul {margin:0 auto; padding:0; list-style-type:none; width:auto;}
+
+/* logo */
+#logo { position:absolute; left:10px; top:16px; width:300px; height:50px;}
+#logo a {display:block; width:100%; height:100%}
+#logo a:hover {text-decoration:none;}
+/* end of logo */
+
+/* Header Tools including Worldwide Dropdown */	
+#headertools {position:absolute; top:3px; right:10px; z-index:1;}
+#headertools form {float:right; clear:both;}
+.nav, .nav * {
+	margin:0;
+	padding:1px 0;
+}
+
+.nav {
+	line-height:10px;
+	float:left;
+	margin-bottom:12px;
+	font-weight:bold;
+}
+.nav ul {
+	background:transparent url(/matlabcentral/images/dropdownmenubgd-trans.png); /*IE6 needs this*/
+	
+}
+.nav li {
+	float:left;
+	position:relative;
+	
+}
+ul.nav li.dropdown, ul.nav li.start, ul.nav li.nodropdown {padding-left:8px; padding-right:10px; background:transparent url(/matlabcentral/images/line-dark.gif) left no-repeat;}
+ul.nav li.dropdown {padding-left:10px; padding-right:10px; background:none;}
+.nav li a {
+	display:block;
+	float:left;
+	padding: 6px 0 6px 6px;
+	text-decoration:none;
+	width:117px;
+}
+.nav li.dropdown a.start {
+	text-align:right;
+}
+.nav li.nodropdown a {
+	display:block;
+	float:left;
+	padding: 6px 0 6px 6px;
+	text-decoration:none;
+	width:auto;
+}
+
+.nav li ul {
+	float:none;
+	top:-9999px;
+	position:absolute;
+	font-weight:normal;
+	border:1px solid #CCCCCC; 
+}
+.nav li ul li a:link, .nav li ul li a:visited, .nav li ul li a:active, .nav li ul li a:hover {
+	color:#0051b0;
+}
+.nav li:hover,
+.nav li.sfHover,
+.nav a:focus, .nav a:hover, .nav a:active {
+	background:none;
+}
+
+.nav li li:hover,
+.nav li li.sfHover,
+.nav li li a:focus, .nav li li a:hover, .nav li li a:active {
+	background:#CFDEFF;
+}
+
+.nav li:hover ul, /* pure CSS hover is removed below */
+ul.nav li.sfHover ul {
+	right:12px;
+	top:20px;
+}
+
+.nav li:hover li ul,
+.nav li.sfHover li ul {
+	top:-9999px;
+}
+.nav li li:hover ul, /* pure CSS hover is removed below */
+ul.nav li li.sfHover ul {
+	left:115px;
+	top:-1px;
+	width:115px;
+}
+/*following rule negates pure CSS hovers
+so submenu remains hidden and JS controls
+when and how it appears*/
+.superfish li:hover ul,
+.superfish li li:hover ul {
+	top:-9999px;
+}
+
+.nav li li {
+	background:none;
+	float:none;
+	width:114px;
+}
+.nav li li li {
+	background:none;
+}
+.nav li li a {
+	float:none;
+	padding-right:0;
+	width:114px;
+}
+/* quick hacks for IE */
+*html .nav ul { background-color:#fff; background-image:none; background-opacity:.7; }
+*html ul.nav li {margin-top:2px;}
+*html ul.nav li li {
+	margin-bottom:-3px;
+}
+*html .nav li li li {
+	margin-bottom:-1px;
+}
+*+html .nav li li {
+	margin-bottom:-3px;
+}
+*+html .nav li li li {
+	margin-bottom:-1px;
+}
+
+#site_search .searchitems {float:left;}
+#site_search .text {padding:1px 5px; width:100px;}
+
+#header ol#access2 { display:block; white-space:nowrap; margin:0; padding:0; float:right; clear:both; margin-top:26px;}
+html>body ol#access2 { margin-top:13px;}
+ol#access2 a {display:none;}
+ol#access2 li {display:inline; margin:0; text-align:right; white-space:nowrap; padding:0 12px; background:transparent url(/matlabcentral/images/line-dark.gif) left no-repeat;}
+ol#access2 li.first { padding-right:10px; background:none;}
+ol#access2 li a {display:inline; font-weight:bold; }
+
+/* end of headertools */
+
+/* end of header */
+/* FOOTER */
+#footer *  {
+	font-size:10px; 
+	color:#878787;
+	line-height:15px;
+	margin-left:0;
+	}
+
+#footer .wrapper div {padding-left:20px;}
+
+
+#footer ul li {
+	display: inline;
+	list-style-type: none;
+	padding: 0 10px 0 10px;
+	border-left: 1px solid #ccc;
+	}
+#footer ul li.first {
+	border-left: none;
+	padding-left:0;
+	}
+/* end of footer */
+
+
+br {line-height:1px;}
+.clearboth {clear:both; line-height:1px;}
+.break { display:block;}
+.clearleft {clear:left;}
+.clearright {clear:right;}
+
+
+
+
+
+/* L0CAL NAV */	
+
+ul#localnav {
+	width: 177px;
+	overflow:hidden;
+	padding: 18px 0 1em 0;
+	margin:0;
+	margin-bottom: 1em;
+	background: transparent url(/matlabcentral/images/localnav_bg.gif) no-repeat top left;
+	color: #0051b0; 
+		list-style: none;
+		border: none;
+		height:487px;
+		border-right:1px solid #fff;
+		}		
+		
+	ul#localnav li {
+		line-height:18px;
+		border-bottom: 1px;
+		margin: 0;
+		padding:0;
+		list-style: none;
+		list-style-image: none;
+		background:none;
+		width:170px;
+		overflow:hidden;
+		}
+	
+	ul#localnav li a {
+		display: block;
+		padding: 2px 3px 3px 0.8em;
+		height:auto!important;
+		background-color: none;
+		color: #0051b0; 
+		text-decoration: none;
+		margin-right:0;
+		margin-left:4px;
+		}
+	ul#localnav li a.hintanchor {
+		padding-left:21px!important;
+		}
+
+	html > body ul#localnav li a {
+		width: auto;
+		}
+
+	ul#localnav li a:hover {
+		background-color:#d3d3d3;
+		}
+	ul#localnav li.active a:hover {
+		background-color:#5c7ba9;
+		}
+	ul#localnav li.active a, ul#localnav ul li.active a:hover, ul#localnav ul li.active a:visited {color:#fff; }
+	#localnav li.sectionhead {color:#7e7e7e;line-height:1.5em; margin-right:3px;margin-left:6px;margin-top:8px;border-bottom:1px solid #d3d3d3; }
+		#localnav li.divider {color:#7e7e7e;line-height:2px; margin-right:3px;margin-left:6px;margin-top:3px;border-bottom:1px solid #d3d3d3; }
+	/* for Mozilla/Safari/Opera */
+*>#localnav {
+ padding-top: 300px;
+ min-height: 1px;
+}
+*>#localnav ul {
+ margin-top: -298px;
+}
+/* for IE, with IE5/Mac backslash filter \*/
+* html #localnav {
+ height: 300px;
+}
+/* end of localnav */
+
+
+/* Global Navigation */
+#globalnav { position:absolute; left:0; top:88px;width:100%; background:transparent url(/matlabcentral/images/globalnavbgd.gif) repeat-x top left; text-align: center; display:block; height:32px;  }
+		#globalnav ol {margin-left:200px; height:25px; display:block; padding-top:0; }
+		#globalnav ol li{ background:transparent url(/matlabcentral/images/globalnav_divider.gif) no-repeat; margin-top:-1px; display:block; float:left;clear:none;  padding:0; padding-left:1px; width:auto;  }
+		
+		#globalnav ol li a { line-height:25px; text-align:center; padding:4px 18px 5px 18px; display:inline; background:transparent url(/matlabcentral/images/globalnavbgd.gif) repeat-x left -1px; }
+		#globalnav ol li.community a{ display:inline; text-align:center;background:transparent url(/matlabcentral/images/globalnav_mlc.gif) repeat-x left -1px; }
+		#globalnav ol li.mathworks a{ display:inline; text-align:center;background:transparent url(/matlabcentral/images/globalnav_mw.gif) repeat-x  left -1px; }
+		#globalnav ol li a, #globalnav ol li a:hover, #globalnav ol li a:visited {color:#0051b0; }
+		#globalnav ol li a:hover{text-decoration:none; background:transparent url(/matlabcentral/images/globalnav_hover.gif) repeat-x left -1px;  }
+		#globalnav ol li.community a:hover{text-decoration:none; background:transparent url(/matlabcentral/images/globalnav_hover_mlcicon.gif) no-repeat left -1px;  }
+		#globalnav ol li.mathworks a:hover{text-decoration:none; background:transparent url(/matlabcentral/images/globalnav_hover_mwicon.gif) no-repeat left -1px;  }	
+		#globalnav ol li a:visited {color:#0051b0;}
+		#globalnav ol li.active a {color:#fff;}
+		#globalnav ol li.active a:visited {color:#fff;}
+		#globalnav ol li.icon a {padding-left:31px;}	
+		#globalnav ol li.first { background:transparent url(/matlabcentral/images/globalnav_divider.gif) no-repeat -2px;  }
+		#globalnav ol li.first a { background:transparent url(/matlabcentral/images/globalnav_divider.gif) no-repeat -2px;  }
+		#globalnav ol li.first a:hover{text-decoration:none; background:transparent url(/matlabcentral/images/globalnav_hover.gif) repeat-x left -1px;  }
+
+/* end of Global Navigation */
+
+
+
+
+/* Basic Content */
+
+#mainbody {  position:relative; top:0; margin:0; display:block; margin-top:-20px; margin-left:20px; padding-top:40px; padding-left:2px;padding-right:0; height:100%; width:500px; float:left;} 
+.columns3 #mainbody {width:500px;}
+.columns2 #mainbody {width:715px; margin-right:0;}
+.columns1 #mainbody {width:100%;}
+
+.col1 {width:100%; }
+.col2 {width:50%; }
+.col3 {width:33%; }
+
+*html #mainbody {
+		margin-bottom:0;
+		overflow:visible;
+		}
+
+#mainbody ul, ul, #mainbody ol, ol {list-style-type:none; margin:0; padding:0; margin-bottom:1.75em;line-height:20px;  }
+#mainbody ul, ul { list-style-type:none; margin-left:2px; display:block; }
+#mainbody ol, ol { 	list-style-type:decimal; 
+		list-style-position: inside;
+		margin-left: 0;
+		padding-left: 0;
+		text-indent: -1.65em; 
+		}
+
+
+ol {
+list-style-type:decimal;
+padding-left:2.1em;
+position:relative;
+width:90%;
+}
+
+ol {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+*html #mainbody ol {margin-left:1px;}
+#mainbody ol li 	{ padding-left:1.65em; margin:0;}
+
+ul.structure li {background:none; padding:0;}
+
+
+.gui {margin-bottom:1em;}
+.gui img {border:1px solid #999999; text-align:center;}
+.gui img.noborder {border:none;}
+.gui .caption {color:#838383; font-weight:bold; width:400px; text-align:left; }
+
+.cta a:before {
+	content: "\00BB \0020";
+	}
+/* end of basic content */
+
+/* FORMS */
+/* Forms */
+/* Labels */
+label {float:left; padding-right:6px;}
+/* Fieldsets */
+fieldset    { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
+legend      { font-weight: bold; }
+
+/* Text fields */
+input.text   { width: 350px; margin:0 0.5em 0.5em 0; float:left; }
+input.text   { border:1px solid #bbb; background:#fff; padding:3px 5px; }
+input.small   { border:1px solid #bbb; background:#fff; padding:5px; }
+input.text:focus,
+input.:focus        { border:0px; background:#fff; }
+input              { font-size:1.5em; }
+input.text[disabled], input[readonly], select[disabled], select[readonly], checkbox[disabled], checkbox[readonly], textarea[disabled], textarea[readonly]
+{
+ background-color: #ececec;
+ cursor: default;
+}
+.inputfile {position:relative; z-index: 1; background: transparent url(/matlabcentral/images/button_select.gif) no-repeat right top; width:310px; height:30px; display:block; overflow:hidden;}
+.filefield {position:relative; top:-30px;z-index: 1;  width:320px; display:block;}
+.filefield input.text {width:245px; margin-right:0;}
+.fileUpload {
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	-khtml-opacity: 0;
+	margin:0;
+	}
+	
+.checkbox {background-color:#f4f4f4; padding:0px!important;}
+
+/* Textareas */
+textarea            { font:11px 'Trebuchet MS','Lucida Grande', Arial, sans-serif; width: 350px;margin:0 0.5em 0.5em 0; }
+textarea            { border:1px solid #bbb; background:#fff; padding:5px; }
+textarea:focus      { border:1px solid #999; background:#fff; }
+
+
+/* Select fields */
+select              {  
+	font:11px 'Trebuchet MS','Lucida Grande', Arial, sans-serif; 
+	border:1px solid #ccc; background:#fff;
+	width:200px; margin:0 0.5em 0 0; 
+	float:left;
+	}
+select:focus        { border:1px solid #999; background:#fff; }
+select.small        { border:1px solid #ccc; background:#fff; width:auto; }
+option 				{ padding:1px 2px 0 2px;}
+
+/* Success, error & notice boxes for messages and errors. */
+.error,
+.notice, 
+.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+.error      { background: #FBE3E4; color: #D12F19; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #817134; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #529214; border-color: #C6D880; }
+.error a    { color: #D12F19; }
+.notice a   { color: #817134; }
+.success a  { color: #529214; }
+
+input.gobutton {
+width: 18px;
+height: 18px;
+background: transparent url(/matlabcentral/images/gobutton.gif) no-repeat;
+outline: none;
+padding:0;
+margin:0;
+border:none;
+}
+
+div.button a:hover {text-decoration:none!important;}
+input {
+font: 11px 'Trebuchet MS','Lucida Grande', Arial, sans-serif; 
+padding:0 2px 0 2px;
+margin:0 2px 0 0; 
+}
+input[type=submit]{
+cursor:pointer;
+border:outset 1px #bbbbbb;
+background:#999;
+color:#000;
+padding: 2px 2px;
+margin:0;
+margin-bottom:10px;
+background:url(/matlabcentral/images/formbg.gif) repeat-x left top;
+}
+*html input[type=submit]{
+	line-height:16px;
+	padding:2px 2px 0 2px;
+}
+#header input[type=submit]{
+cursor:pointer;
+border:0;
+background-color:#fffff!important;
+color:transparent!important;
+padding: 2px 2px;
+margin:0;
+margin-bottom:10px;
+background:transparent url(/matlabcentral/images/gobutton.gif) no-repeat left top!important;
+}
+
+input.btn {
+cursor:pointer;
+border:outset 1px #bbbbbb;
+background:#999;
+color:#000;
+padding: 2px 2px;
+margin:0;
+margin-bottom:10px;
+background:url(/matlabcentral/images/formbg.gif) repeat-x left top;
+}
+*html input.btn{ 
+	line-height:16px;
+	padding:2px 2px 0 2px;
+}
+
+#addbutton {
+cursor:pointer;
+border:outset 1px #bbbbbb;
+background:#999;
+color:#000;
+padding: 2px 2px;
+margin:0;
+background:url(/matlabcentral/images/formbg.gif) repeat-x left top;
+}
+
+#site_search {
+width:auto; 
+color:#FFF; 
+float:left;
+margin:0 4px 12px 18px; 
+padding-top:6px;
+}
+textarea {background-color:#fff;}
+
+#site_search select {width:auto;}
+#site_search .searchitems {float:left;}
+/* end of forms */
+
+
+
+/* Basic Content */
+
+/* headings */
+
+h1, h2, h3, h4 {
+	font-family:Lucida Sans,Segoe UI,Arial,Helvetica,sans-serif; 
+	margin: 1.3em 0 0.3em 0; 
+	line-height:1.3em;
+	color:#262626; /* dark gray */
+}
+
+h1 {margin-top:0;}
+
+h2.pretitle { font-size:13px!important; color:#515151; display:block; font-weight:normal; margin:0; padding:0; margin-bottom:6px;}
+
+h5, h6 {
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	margin: 0 0 0.3em 0; 
+	font-weight:bold;
+}
+	h1 { 
+		font-size:1.35em;
+	}
+	h1.sifr {width:500px; margin:0; padding:0;}
+	h2 { font-size: 1.2em; font-weight:bold; }
+	
+	h3 {
+		font-size:1.1em;
+		font-weight:bold;
+		margin-top:2em;
+		}
+	h4 {
+		font-size:.7em;
+		font-weight:bold;
+		}
+	h5 {
+		font-size:.75em;
+		font-weight:bold;
+		}
+	h6 {
+		font-size:.75em;
+		font-weight:normal;
+		font-style:italic;
+		}
+p { font-size:8pt; margin-bottom:.9em;  }
+table tr {line-height:18px;}
+ul, ol 		{font-size:8pt; margin:0; padding:0; margin-bottom:1.5em;margin-top:1.5em;line-height:20px;  }
+ul          { list-style-type:none; margin-left:2px; }
+ol          { list-style-type: decimal; margin-left:1.8em; }
+ol li 	{padding-left:.25em;}
+ul li { background:url(/matlabcentral/images/bullet.gif) no-repeat left 8px; padding-left:1.75em;}
+ul li ul li {font-size:1em; background:url(/matlabcentral/images/bullet_lev2.gif) no-repeat left 8px; }
+dl          { width:100%; }
+dl dt       { float:left; margin:0; width:10em; padding:0; }
+dd          { margin-left:12em; }
+pre {color:#626b77; display:block; margin:.25em 0 .5em 0;font-size:12px; white-space: -moz-pre-wrap; }
+code {display:block; color:#272727; font-size:12px; background-color:#fafafa; border:1px solid #f1f1f1; padding:3px; margin-bottom:6px;}
+p code, ul code {display:inline; padding:0 3px 0 0; border:none; background:none;}
+code.fnctn { font-size:12px;}
+
+table {
+ color:#191919; width:inherit; 
+}
+th {background:#d4dde7 url(/matlabcentral/images/table_th_active_bgd.gif) top right no-repeat; text-align:left; font-weight:normal; border-bottom:1px solid #d6d4d4; vertical-align:bottom; padding:4px;   }
+th.level2 {background:#d4dde7 url(/matlabcentral/images/table_thl2_active_bgd.gif) top right repeat-x; text-align:left; font-weight:normal; border-bottom:1px solid #d6d4d4; border-top:1px solid #fff; vertical-align:bottom; padding:4px;   }
+td { padding:4px; }
+
+
+th.pic, td.pic {border-right:none;}
+tr.odd td {background-color:#f7f7f7;}
+td {vertical-align:top;}
+td.date {width:15em;}
+
+
+/* icon links */
+a.email {background: url(/matlabcentral/images/icon_email.gif) no-repeat left; padding-left:22px; }
+a.pdf {background: url(/matlabcentral/images/icon_pdf.gif) no-repeat left; padding-left:18px; }
+a.rss {background: url(/matlabcentral/images/icon_rss.gif) no-repeat left; padding-left:18px; line-height:17px; padding-top:1px; padding-bottom:1px;}
+
+a.info, a.info:hover, a.info:focus {cursor:pointer; background: url(/matlabcentral/images/icon_info.gif) no-repeat left top; padding-left:20px; padding-top:1px;  padding-bottom:2px; font-weight:normal;}
+a.notext, a.notext:hover, a.notext:focus {text-decoration:none;}
+/* end of basic content */
+
+/*horizontal rule*/
+.horizontaldivider { background:transparent url(/matlabcentral/images/rule_horizontal.gif) repeat-x center; width:98%; clear:both; line-height:2px; margin:3px 0; display:block; }
+
+/* CALLOUT BOX */
+.callout {
+ margin:0px auto;
+ min-width:20em;
+ margin-bottom:10px;
+ margin-left:-2px;
+ margin-right:-4px;
+}
+.callout .hd .c,
+.callout .ft .c {
+ font-size:1px; /* ensure minimum height */
+ height:13px;
+}
+.callout .ft .c {
+ height:14px;
+}
+.callout .hd {
+ background:transparent url(/matlabcentral/images/callout_tl.gif) no-repeat 0px 0px;
+}
+.callout .hd .c {
+ background:transparent url(/matlabcentral/images/callout_tr.gif) no-repeat right 0px;
+}
+.callout .bd {
+ background:transparent url(/matlabcentral/images/callout_ml.gif) repeat-y 0px 0px;
+}
+.callout .bd .c {
+ background:transparent url(/matlabcentral/images/callout_mr.gif) repeat-y right 0px;
+}
+.callout .bd .c .s {
+ margin:0px 8px 0px 4px;
+ background:#f6f6f6 url(/matlabcentral/images/callout_ms.jpg) repeat-x 0px 0px;
+ padding:.5em .5em;
+}
+.callout .ft {
+ background:transparent url(/matlabcentral/images/callout_bl.gif) no-repeat 0px 0px;
+}
+.callout .ft .c {
+ background:transparent url(/matlabcentral/images/callout_br.gif) no-repeat right 0px;
+}
+
+.callout {font-family:Tahoma, Ariel, sans-serif; font-size:12px; line-height:16px; }
+.callout p, .callout ul, .callout {font-size:11px; line-height:16px; }
+.callout h1, .callout h2, .callout h3, .callout h4 {color:#363636; margin:0; padding:0;font-size:14px; margin-bottom:.5em;}
+.callout code.fnctn {background:#fff;}
+
+table#breadcrumb {margin-bottom:10px;}
+p#contactus { 
+font-family:Tahoma, Arial, Helvetica, sans-serif;
+font-size:10px;
+line-height:15px;
+color:#878787;
+text-align:left;
+padding-left:2px;}
+
+#mainbody table.mytable tr td p {
+width:700px;
+overflow:hidden;
+word-wrap: break-word;
+white-space:normal;
+}
+
+#mainbody #breadcrumbs span.searchterm { 
+	display:block;
+	width:700px; 
+	overflow:hidden!important;
+	word-wrap: break-word;
+	white-space:normal;
+	}
+

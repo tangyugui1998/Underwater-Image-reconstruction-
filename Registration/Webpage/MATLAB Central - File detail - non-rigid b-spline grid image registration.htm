@@ -1,0 +1,2705 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0100)http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration -->
+<HTML lang="en"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- START OF GLOBAL NAV -->
+  <LINK href="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/sitewide.css" rel="stylesheet" type="text/css">
+  <LINK href="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/mlc.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+    
+    
+<LINK href="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/fileexchange.css" rel="stylesheet" type="text/css">
+<TITLE>MATLAB Central - File detail - non-rigid b-spline grid image registration</TITLE>
+<SCRIPT src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/prototype.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/effects.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/dragdrop.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/controls.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/application.js" type="text/javascript"></SCRIPT>
+<LINK href="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/application.css" media="screen" rel="stylesheet" type="text/css">
+<LINK rel="search" type="application/opensearchdescription+xml" title="Search File Exchange" href="http://www.mathworks.com/matlabcentral/fileexchange/search.xml">
+
+  </HEAD><BODY>
+      <DIV id="header">
+  <DIV class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <DIV class="main">
+      <DIV id="logo"><A href="http://www.mathworks.com/matlabcentral/" title="Home">&nbsp;</A></DIV>
+        <DIV id="headertools">
+        
+
+<SCRIPT language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+choice = document.forms['searchForm'].elements['search_submit'].value;
+
+if (choice == "entire1" || choice == "entire2" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+
+   var searchInputNames = new Array("db","prox","rorder","rprox","rdfreq","rwfreq","rlead","sufs","order","is_summary_on","ResultCount");
+   var searchInputValues = new Array("MSS","page","750","750","500","500","250","0","r","1","10");
+
+   for (var i=0; i<searchInputNames.length; i++){
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = searchInputNames[i];
+      newElem.value = searchInputValues[i];
+      document.forms['searchForm'].appendChild(newElem);
+   }
+
+   submit_action = '/cgi-bin/texis/webinator/search/';
+}
+
+switch(choice){
+   case "matlabcentral":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "matlabcentral";
+      newElem.value = "Matlabcentral";
+      document.forms['searchForm'].appendChild(newElem);
+
+      selected_index = 0;
+      break
+   case "fileexchange":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "term";
+      newElem.value = query.value;
+      newElem.classname = "formelem";
+      document.forms['searchForm'].appendChild(newElem);
+
+      submit_action = "/matlabcentral/fileexchange/";
+      selected_index = 1;
+      break
+   case "cssm":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "search_string";
+      newElem.value = query.value;
+      newElem.classname = "formelem";
+      document.forms['searchForm'].appendChild(newElem);
+
+			submit_action = "/matlabcentral/newsreader/search_results";
+      selected_index = 2;
+      break
+   case "linkexchange":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "term";
+      newElem.value = query.value;
+      newElem.classname = "formelem";
+      document.forms['searchForm'].appendChild(newElem);
+
+      submit_action = "/matlabcentral/linkexchange/";
+      selected_index = 3;
+      break
+   case "blogs":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "blogs";
+      newElem.value = "Blogs";
+      document.forms['searchForm'].appendChild(newElem);
+
+      selected_index = 4;
+      break
+   case "contest":
+      var newElem = document.createElement("input");
+      newElem.type = "hidden";
+      newElem.name = "contest";
+      newElem.value = "Contest";
+      document.forms['searchForm'].appendChild(newElem);
+
+      selected_index = 5;
+      break
+   case "entire1":
+      selected_index = 6;
+      break
+   case "entire2":
+      selected_index = 7;
+      break
+   default:
+      selected_index = 7;
+      break
+}
+
+document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+document.forms['searchForm'].elements['query'].value = query.value;
+document.forms['searchForm'].action = submit_action;
+
+}
+
+</SCRIPT>
+
+
+  <FORM name="searchForm" action="" onsubmit="submitForm(query)" method="POST" style="margin:0px; margin-top:5px; font-size:90%">
+          <LABEL for="search">Search:</LABEL>
+        <SELECT name="search_submit" style="font-size:9px ">
+          	<OPTION selected="" value="matlabcentral">MATLAB Central</OPTION>
+          	<OPTION value="fileexchange">&nbsp;&nbsp;&nbsp;File Exchange</OPTION>
+            <OPTION value="cssm">&nbsp;&nbsp;&nbsp;MATLAB Newsgroup</OPTION>
+          	<OPTION value="linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</OPTION>
+          	<OPTION value="blogs">&nbsp;&nbsp;&nbsp;Blogs</OPTION>
+          	<OPTION value="contest">&nbsp;&nbsp;&nbsp;Programming Contest</OPTION>
+          <OPTION value="entire1">MathWorks.com</OPTION>
+          <OPTION value="entire2">&nbsp;&nbsp;&nbsp;All of MathWorks.com</OPTION>
+        </SELECT>
+<INPUT name="query" size="10" class="formelem" type="text" value="">
+<INPUT name="search" class="formelem gobutton" type="submit" value=" Go ">
+</FORM>
+
+        <OL id="access2">
+            
+            
+              <A href="https://www.mathworks.com/accesslogin/index_fe.do?uri=http://www.mathworks.com/matlabcentral/fileexchange/file_infos/20057-non-rigid-b-spline-grid-image-registration">Login</A> 
+              <LI class="first"><A href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/matlabcentral/fileexchange/file_infos/20057-non-rigid-b-spline-grid-image-registration">Create Account</A></LI>
+              <LI><A href="https://www.mathworks.com/accesslogin/index_fe.do?uri=http://www.mathworks.com/matlabcentral/fileexchange/file_infos/20057-non-rigid-b-spline-grid-image-registration">Login</A></LI>
+            
+        </OL>
+      </DIV>
+	  
+        <DIV id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <OL>
+                <LI class="active">
+                        <A href="http://www.mathworks.com/matlabcentral/fileexchange/">File Exchange</A> 
+                </LI>
+                <LI class=";">
+                        <A href="http://www.mathworks.com/matlabcentral/newsreader/">Newsgroup</A> 
+                </LI>
+                <LI class=";">
+                        <A href="http://www.mathworks.com/matlabcentral/linkexchange/">Link Exchange</A> 
+                </LI>
+                <LI class=";">
+                        <A href="http://blogs.mathworks.com/">&nbsp;&nbsp;Blogs&nbsp;&nbsp;</A> 
+                </LI>
+                <LI class=";">
+                        <A href="http://www.mathworks.com/matlabcentral/contest/">&nbsp;Contest&nbsp;</A> 
+                </LI>
+                <LI class="icon mathworks">
+                        <A href="http://www.mathworks.com/">MathWorks.com</A> 
+                </LI>
+        </OL>
+      </DIV>
+    </DIV>
+  </DIV>
+</DIV>
+
+      <DIV id="middle">
+  <DIV class="wrapper">
+<DIV id="colleft">
+  <UL id="localnav">
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/">Files</A></LI>
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/products">Files by Product</A></LI>
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/categories">Files by Category</A></LI>
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/tags">Tags</A></LI>
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors">Authors</A></LI>
+		<LI><A href="http://www.mathworks.com/matlabcentral/fileexchange/feedbacks">Comments and Ratings</A></LI>
+		
+		<LI class="maincta"><A href="http://www.mathworks.com/matlabcentral/fileexchange/new" class="submitfile">Submit a File</A></LI>
+  </UL>
+</DIV>
+    <DIV class="columns2" id="mainbody">
+
+  <TABLE cellpadding="0" cellspacing="0" class="details file">
+    <TBODY><TR>
+      <TH class="maininfo"> 
+        <DIV id="rankinfo">
+          
+          
+            <DIV class="starrating">
+              <DIV style="width:95.0%;">
+                <P>4.75</P>
+              </DIV>
+            </DIV>
+            <SPAN class="numberrating">
+              4.8
+              <SPAN class="divider"> | </SPAN>
+              <A href="http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration#feedback">12 ratings</A>
+            </SPAN>
+            <A id="ratelink" href="http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration#comments">Rate this file</A>
+                  
+          <SPAN id="downloads">197 downloads (last 30 days)</SPAN>
+          <SPAN id="filesize">File Size: 670.18 KB</SPAN>
+          <SPAN id="fileid">File ID: #20057</SPAN>
+        </DIV>
+        
+          <DIV id="thumbnail">
+            <A href="http://www.mathworks.com/matlabcentral/fx_files/20057/29/20057.jpg" border="0"><IMG src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/preview.jpg" alt="image thumbnail"></A>
+            <P><A href="http://www.mathworks.com/matlabcentral/fx_files/20057/29/20057.jpg">View full size image</A></P>
+          </DIV>
+        
+        <DIV id="details">
+          <H1>non-rigid b-spline grid image registration</H1>
+          <P id="author">
+            by <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+          </P>
+          <P id="submissiondate">&nbsp;</P>
+          <P>
+            26 May 2008 
+            
+              (Updated 11 Jan 2010)
+            
+          </P>
+
+          <P id="license">
+            
+            
+              Code covered by the <A href="http://www.mathworks.com/matlabcentral/fileexchange/view_license?file_info_id=20057" onclick="window.open(this.href,&#39;new_window&#39;,&#39;height=500,width=640&#39;);return false;">BSD License</A>
+              <A href="http://www.mathworks.com/matlabcentral/fileexchange/help_license#bsd" class="info notext" onclick="window.open(this.href,&#39;small&#39;,&#39;toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=600,height=550&#39;);return false;">&nbsp;</A>
+                        
+          
+
+          </P><P id="summary">Registration of two 2D/3D images, rigid and with smooth b-spline grid.</P>
+          
+          
+          
+          
+          <P id="filetools">
+            <A href="http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration?controller=file_infos&download=true" class="download" title="Download Now">Download Now</A>
+            
+            <SPAN class="divider"> | </SPAN>
+            
+      				<A href="http://www.mathworks.com/matlabcentral/fileexchange/watchlists/new?type=file&uri=%2Fmatlabcentral%2Ffileexchange%2F20057-non-rigid-b-spline-grid-image-registration&watching=20057" class="addwatch" title="Watch this file">Watch this File</A>
+  		      
+            </P>
+        </DIV>
+      </TH>
+    </TR>
+    <TR>
+      <TD class="file">
+        <TABLE cellpadding="0" cellspacing="0" border="0" class="fileview section">
+          <TBODY><TR class="title">
+            <TH colspan="2"><SPAN class="heading">File Information</SPAN></TH>
+          </TR>
+          <TR>
+            <TD class="label">Description</TD>
+            <TD><P>Registration of two  2D color/grayscale images or 3D volumes both rigid and non-rigid with smooth b-spline grid. No landmarks are needed because registration is image region based, but landmarks can be added as transformation regularization.</P>
+
+<P>This function can use localized normalized mutual information as registration error, allowing the images or volumes to be of a different type for instance a MRI T1 and T2 patient scan.</P>
+
+<P>Description:
+<BR>This function is an (enhanced) implementation of the b-spline registration algorithm in D. Rueckert et al. "Nonrigid Registration Using Free-Form Deformations: Application to Breast MR Images".  Including the smoothness penalty of Rueckert (thin sheet of metal bending energy).</P>
+
+<P>How it works:
+<BR>A grid of b-spline control points is constructed which controls the transformation of an input image. An error measure is used to measure the registration error between the moving and static image. The quasi newton Matlab optimizer fminlbfgs (also on Mathworks) is used to move the control points to achieve the optimal registration between both images with minimal registration error.</P>
+
+<P>Usage:
+<BR>The functions register_images.m and register_volumes.m are easy to use, have some examples in the help, and will fit most applications. (If you want to write your own specialized registration code study the registration examples)
+<BR>There is also the (new) function manually_warp_images which allow control grid changes with the mouse, to get a better registration.</P>
+
+<P>First, you need to compile mex / C code with compile_c_files.m.  (2D registration also works without mex files but will be slower)</P>
+
+<P>The multi-threaded mex code supports Windows, Linux (and Mac OS?)</P>
+
+<P>Some Features:
+<BR>- 2-D / 3-D Eulerian strain tensor images can be made from the transformations fields. For example to describe cardiac motion in the images.
+<BR>- Landmarks can be used for already known corresponding points (for example from Sift). Influence  of every landmark on the registration process can be adjust. 
+<BR>- It is possible to register a number of movie frames by using the registration grid of previous two images as initial registration grid of the next two images.
+<BR>- It is possible to mask parts of the images, to decrease or increase the influence of an image structure on the registration result.</P>
+
+<P>note:
+<BR>- B-spline registration is slow and complex in comparison with demon registration see:
+<BR><A href="http://www.mathworks.fr/matlabcentral/fileexchange/loadFile.do?objectId=21451">http://www.mathworks.fr/matlabcentral/fileexchange/loadFile.do?objectId=21451</A></P>
+
+<P>Please report bugs, successes and questions. </P></TD>
+          </TR>
+  
+          
+        
+          
+            <TR>
+              <TD class="label"> Required Products </TD>
+              <TD>
+                
+                  <A href="http://www.mathworks.com/products/image/">Image Processing Toolbox</A><BR>
+                
+              </TD>
+            </TR>
+          
+          
+          <TR>
+            <TD class="label">MATLAB release</TD>
+            <TD>
+              MATLAB 7.7 (R2008b)
+            </TD>
+          </TR>
+  
+          
+  
+  
+             
+   
+          
+               
+            <TR>
+              <TD class="label"><SPAN class="heading">Zip File Content</SPAN></TD>
+              <TD>&nbsp;</TD>
+            </TR>
+  
+            
+  
+            
+            
+              
+              <TR>
+                <TD class="label">Other Files </TD>
+                <TD>
+                  <DIV class="textframe">
+                  compile_c_files.m, <BR>functions/backwards2forwards.m, <BR>functions/backwards2forwards_2d_double.c, <BR>functions/backwards2forwards_2d_double.m, <BR>functions/backwards2forwards_3d_double.c, <BR>functions/backwards2forwards_3d_single.c, <BR>functions/fminlbfgs.m, <BR>functions/image_difference.m, <BR>functions/imgaussian.c, <BR>functions/imgaussian.m, <BR>functions/imresize3d.m, <BR>functions/make_grid_image.m, <BR>functions/make_init_grid.m, <BR>functions/maple_penalties_smoothing_2d.mw, <BR>functions/maple_penalties_smoothing_3d.mw, <BR>functions/mutual_histogram_double.c, <BR>functions/mutual_histogram_double.m, <BR>functions/mutual_histogram_single.c, <BR>functions/penalties_smoothness.m, <BR>functions/penalty_matrix.mat, <BR>functions/refine_grid.m, <BR>functions/showcs3.fig, <BR>functions/showcs3.m, <BR>functions/squared_difference_double.c, <BR>functions/squared_difference_double.m, <BR>functions/squared_difference_single.c, <BR>functions/strain.m, <BR>functions_affine/affine_error_3d_double.c, <BR>functions_affine/affine_error_3d_single.c, <BR>functions_affine/affine_registration_error.m, <BR>functions_affine/affine_registration_image.m, <BR>functions_affine/affine_transform.m, <BR>functions_affine/affine_transform_2d_double.c, <BR>functions_affine/affine_transform_2d_double.m, <BR>functions_affine/affine_transform_3d_double.c, <BR>functions_affine/affine_transform_3d_single.c, <BR>functions_affine/image_interpolation.c, <BR>functions_affine/image_interpolation.h, <BR>functions_affine/make_transformation_matrix.m, <BR>functions_nonrigid/bspline_error_2d_double.c, <BR>functions_nonrigid/bspline_error_3d_double.c, <BR>functions_nonrigid/bspline_error_3d_single.c, <BR>functions_nonrigid/bspline_registration_gradient.m, <BR>functions_nonrigid/bspline_registration_image.m, <BR>functions_nonrigid/bspline_transform.m, <BR>functions_nonrigid/bspline_transform_2d_double.c, <BR>functions_nonrigid/bspline_transform_2d_double.m, <BR>functions_nonrigid/bspline_transform_3d_double.c, <BR>functions_nonrigid/bspline_transform_3d_single.c, <BR>functions_nonrigid/image_interpolation.c, <BR>functions_nonrigid/image_interpolation.h, <BR>functions_nonrigid/movepixels.m, <BR>functions_nonrigid/movepixels_2d_double.c, <BR>functions_nonrigid/movepixels_2d_double.m, <BR>functions_nonrigid/movepixels_3d_double.c, <BR>functions_nonrigid/movepixels_3d_single.c, <BR>images/brain1.png, <BR>images/brain2.png, <BR>images/brain3.png, <BR>images/landmarks.mat, <BR>images/landmarks1.png, <BR>images/landmarks2.png, <BR>images/lena.jpg, <BR>images/lenag1.png, <BR>images/lenag2.png, <BR>images/lenag3.png, <BR>images/lenag4.png, <BR>images/prostate1.png, <BR>images/prostate2.png, <BR>license.txt, <BR>low_level_examples/addpaths.m, <BR>low_level_examples/example_2d_affine.m, <BR>low_level_examples/example_2d_nonrigid_1.m, <BR>low_level_examples/example_2d_nonrigid_2.m, <BR>low_level_examples/example_2d_nonrigid_3.m, <BR>low_level_examples/example_3d_affine.m, <BR>low_level_examples/example_3d_nonrigid.m, <BR>low_level_examples/get_example_data.m, <BR>manually_warp_images.fig, <BR>manually_warp_images.m, <BR>register_images.m, <BR>register_volumes.m
+                  </DIV>
+                </TD>
+              </TR>
+            
+          
+        </TBODY></TABLE>
+  
+        <TABLE cellpadding="0" cellspacing="0" border="0" class="fileview section">
+          <TBODY><TR class="title">
+            <TH colspan="2">
+              <SPAN class="heading">Tags for This File </SPAN>
+              <A href="http://www.mathworks.com/matlabcentral/fileexchange/help_tags" class="info notext" onclick="window.open(this.href,&#39;small&#39;,&#39;toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=600,height=550&#39;);return false;">&nbsp;</A>
+            </TH>
+          </TR>
+          <TR>
+            <TD class="label">Everyone's Tags</TD>
+            <TD>
+              <DIV id="all_tags">
+                <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%222d%22" rel="nofollow">2d(2)</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%223d%22" rel="nofollow">3d(2)</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22affine%22" rel="nofollow">affine</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22bspline%22" rel="nofollow">bspline(2)</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22c+mex%22" rel="nofollow">c mex</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22elastic%22" rel="nofollow">elastic</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22eulerian+strain%22" rel="nofollow">eulerian strain</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22free+form+deformation%22" rel="nofollow">free form deformation</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22geometric+transformation%22" rel="nofollow">geometric transformation</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22image%22" rel="nofollow">image</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22image+registration%22" rel="nofollow">image registration</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22landmarks%22" rel="nofollow">landmarks</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22mutual+information%22" rel="nofollow">mutual information</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22nonrigid%22" rel="nofollow">nonrigid(2)</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22registration%22" rel="nofollow">registration(2)</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22rigid%22" rel="nofollow">rigid</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22strain+tensor%22" rel="nofollow">strain tensor</A></SPAN>, <SPAN><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22transformation+field%22" rel="nofollow">transformation field</A></SPAN>   
+
+
+       
+              </DIV>
+            </TD>
+  
+          </TR>
+            <TR>
+              <TD class="label">Tags I've Applied</TD>
+              <TD>
+                <DIV id="my_tags">
+                  <SPAN>
+                    
+                  </SPAN>
+                </DIV>
+              </TD>
+            </TR>
+          <TR>
+  
+          <TD class="label">Add New Tags</TD>
+            <TD>
+              
+  						  <A href="https://www.mathworks.com/accesslogin/index_fe.do?uri=http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration">Please login</A> to tag files.						
+              
+            </TD>
+          </TR>
+        </TBODY></TABLE>
+  
+        
+          <A name="feedback"></A>
+            <DIV id="feedbacks_table">
+              
+
+<TABLE cellpadding="0" cellspacing="0" border="0" class="fileview section">
+  <TBODY><TR class="title">
+    <TH colspan="4"><SPAN class="heading">Comments and Ratings</SPAN> <SPAN class="info">(77)</SPAN></TH>
+  </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">27 May 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Dirk-Jan Kroon
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Fast version available May 28 2008.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">28 May 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Dirk-Jan Kroon
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>nonrigid3dfast.m also uploaded soon available...</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">09 Jun 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          fabrizio fasano
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>great job. very useful for the MR community</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">26 Jun 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Ramin Mafi
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thanks for the codes</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">19 Jul 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Xu Han
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Very brilliant work! I will try to program it and learn it. Thank you very much</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">28 Aug 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Perico Palotes
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>There must be something wrong on the C code because some error are poped out when I try to compile the c files.</P>
+
+<P>Error bspline_transform_3d_double.c: 37  undeclared identifier `mwSize' 
+<BR>Warning bspline_transform_3d_double.c: 37  Statement has no effect 
+<BR>Error bspline_transform_3d_double.c: 37  syntax error; found `ZOsizex' expecting `;' 
+<BR>Error bspline_transform_3d_double.c: 37  undeclared identifier `ZOsizex' 
+<BR>Error bspline_transform_3d_double.c: 37  undeclared identifier `ZOsizey' 
+<BR>Error bspline_transform_3d_double.c: 37  undeclared identifier `ZOsizez' 
+<BR>Warning bspline_transform_3d_double.c: 37  Statement has no effect 
+<BR>Error bspline_transform_3d_double.c: 38  illegal statement termination 
+<BR>Error bspline_transform_3d_double.c: 38  skipping `const' 
+<BR>Error bspline_transform_3d_double.c: 38  undeclared identifier `dims' 
+<BR>Warning bspline_transform_3d_double.c: 38  Statement has no effect 
+<BR>Warning bspline_transform_3d_double.c: 40  Statement has no effect 
+<BR>Error bspline_transform_3d_double.c: 40  syntax error; found `Osizex' expecting `;' 
+<BR>Error bspline_transform_3d_double.c: 40  undeclared identifier `Osizex' 
+<BR>Error bspline_transform_3d_double.c: 40  undeclared identifier `Osizey' 
+<BR>Error bspline_transform_3d_double.c: 40  undeclared identifier `Osizez' 
+<BR>Warning bspline_transform_3d_double.c: 40  Statement has no effect 
+<BR>Error bspline_transform_3d_double.c: 43  illegal statement termination 
+<BR>Error bspline_transform_3d_double.c: 43  skipping `double' 
+<BR>Error bspline_transform_3d_double.c: 43  undeclared identifier `u' 
+<BR>Error bspline_transform_3d_double.c: 43  undeclared identifier `v' 
+<BR>Error bspline_transform_3d_double.c: 43  undeclared identifier `w' 
+<BR>Warning bspline_transform_3d_double.c: 43  Statement has no effect 
+<BR>Error bspline_transform_3d_double.c: 44  illegal statement termination 
+<BR>Error bspline_transform_3d_double.c: 44  skipping `int' 
+<BR>Error bspline_transform_3d_double.c: 44  undeclared identifier `i' 
+<BR>Error bspline_transform_3d_double.c: 44  too many errors 
+<BR>&nbsp;
+<BR>&nbsp;&nbsp;C:\MATLAB701\BIN\WIN32\MEX.PL: Error: Compile of 'bspline_transform_3d_double.c' failed. 
+<BR>&nbsp;
+<BR>??? Error using ==&gt; mex
+<BR>Unable to complete successfully </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">01 Sep 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Dirk-Jan Kroon
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Matlab 2007b and newer releases require "mwSize" as type to store data dimensions.
+<BR>You can simply replace "mwSize" by (a normal) "int", to make the code work with your Matlab version.</P>
+
+<P>Dirk-Jan
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">02 Sep 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          N M
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thank you for posting this - it looks like it could be very useful for a lot of applications. I'm wondering how difficult it would be to modify it to register two 3D data sets with different voxel dimensions, numbers of slices and prescriptions (i.e., different, x,y,z vectors for the different datasets)? If so, any chance you could you post an example?</P>
+
+<P>Thanks,
+<BR>N </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">16 Sep 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          deborah alley
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>good, although processing time is long.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="4">
+            <DIV style="width:80%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">17 Sep 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          Dirk-Jan Kroon
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*deborah alley
+<BR>This week or the next I will release multi-threaded code, with more speed optimizations and control grid smooth optimization.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">12 Nov 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/35280">siwo</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>seems ur codes just work with Windows:(, could u tell me which C-compiler u used under windows?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">02 Dec 2008</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/38114">rania hassen</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>i got this error when i tried to compile one file 
+<BR>mex rigid_transform_2d_double.c
+<BR>Error rigid_transform_2d_double.c: 132  syntax error; found `*' expecting `;' 
+<BR>Error rigid_transform_2d_double.c: 132  undeclared identifier `dims' 
+<BR>Error rigid_transform_2d_double.c: 132  type error: pointer expected 
+<BR>Warning rigid_transform_2d_double.c: 132  Statement has no effect 
+<BR>Error rigid_transform_2d_double.c: 134  illegal statement termination 
+<BR>Error rigid_transform_2d_double.c: 134  skipping `double' 
+<BR>Error rigid_transform_2d_double.c: 134  undeclared identifier `mean' 
+<BR>Error rigid_transform_2d_double.c: 134  type error: pointer expected 
+<BR>Error rigid_transform_2d_double.c: 134  illegal expression 
+<BR>Error rigid_transform_2d_double.c: 134  syntax error; found `0' expecting `;' 
+<BR>Warning rigid_transform_2d_double.c: 134  Statement has no effect 
+<BR>Error rigid_transform_2d_double.c: 134  syntax error; found `}' expecting `;' 
+<BR>Warning rigid_transform_2d_double.c: 134   possible usage of mean before definition 
+<BR>Warning rigid_transform_2d_double.c: 132   possible usage of dims before definition 
+<BR>Warning rigid_transform_2d_double.c: 132  local `const int mwSize' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 125  local `pointer to pointer to void ThreadList' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 120  local `pointer to pointer to double ThreadArgs2' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 120  local `pointer to pointer to double ThreadArgs1' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 117  local `pointer to double M' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 117  local `pointer to double Iout' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 117  local `pointer to double Iin' is not referenced 
+<BR>Warning rigid_transform_2d_double.c: 134  empty declaration 
+<BR>Error rigid_transform_2d_double.c: 137  invalid initialization type; found `pointer to pointer to void' expected `int' 
+<BR>Error rigid_transform_2d_double.c: 137  initializer must be constant 
+<BR>Error rigid_transform_2d_double.c: 140  invalid initialization type; found `pointer to pointer to double' expected `int' 
+<BR>Error rigid_transform_2d_double.c: 140  initializer must be constant 
+<BR>Error rigid_transform_2d_double.c: 141  invalid initialization type; found `pointer to pointer to double' expected `int' 
+<BR>Error rigid_transform_2d_double.c: 141  initializer must be constant 
+<BR>Error rigid_transform_2d_double.c: 145  unrecognized declaration 
+<BR>Error rigid_transform_2d_double.c: 145  syntax error; found `!=' expecting `)' 
+<BR>Error rigid_transform_2d_double.c: 145  syntax error; found `!=' expecting `;' 
+<BR>Error rigid_transform_2d_double.c: 145  skipping `!=' 
+<BR>Error rigid_transform_2d_double.c: 145  too many errors 
+<BR>&nbsp;
+<BR>&nbsp;&nbsp;C:\PROGRAM FILES\MATLAB\R2006A\BIN\MEX.PL: Error: Compile of 'rigid_transform_2d_double.c' failed. 
+<BR>&nbsp;
+<BR>??? Error using ==&gt; mex
+<BR>Unable to complete successfully</P>
+
+<P>Help Me plz</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">24 Jan 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/43398">Hu Jun</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>&nbsp;Error: File: C:\MATLAB6p5\work\nonrigid_version10b\example_2d_nonrigid_1.m Line: 38 Column: 19
+<BR>"identifier" expected, "(" found.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">03 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/48166">Maria Garcia</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Error using all example_3d : 
+<BR>??? Seven inputs are required.</P>
+
+<P>Error in ==&gt; bspline_transform at 46
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I=bspline_transform_3d_single(single(O(:,:,:,1)),single(O(:,:,:,2)),single(O(:,:,:,3)),single(I),single(Spacing(1)),single(Spacing(2)),single(Spacing(3)),single(black));</P>
+
+<P>Error in ==&gt; get_example_data at 17
+<BR>V1=bspline_transform(O_trans,V2,Spacing);</P>
+
+<P>Error in ==&gt; example_3d_affine at 10
+<BR>[I1,I2]=get_example_data;</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">04 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thanks for your error report, I forgot to update the single threaded version of bspline_transform_3d_single.c , and will update the code today.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">10 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/47038">Am VR</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dirk-Jan Kroon ,</P>
+
+<P>Thanks a lot for sharing  this great piece of work with us. This is a very nice contribution to the Mathworks file exchange repository. </P>
+
+<P>I have one question about your code though. I am looking at your submission on Mar 4. When I run one of your examples, e.g. example_2d_nonrigid_1.m, the results figure shows four images, and I am not sure I understand what is being displayed.</P>
+
+<P>Shouldn't 'transformed image 1'  (Icor in your code) be the result of registering Image 1 (I1) onto image 2 (I2)?  If so, 'transformed image 1'  should look similar to 'image 2', right? However, in your figure 'transformed image 1' resembles more  image 1 than image 2. Am I missing something?  Is the registration really working in this example?</P>
+
+<P>Thanks a lot!
+<BR>Best,
+<BR>AmR
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">11 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Am VR,</P>
+
+<P>Image 1 is a spherical distored version of Image 2. If you look at the registration result "Icor" you can notice that for instance the hat of Lena has shrinked to the size of the hat in image 2. </P>
+
+<P>I know the nose in the image registration result still looks like the same as in image 1. This is because the grid is to coarse, and that is why image_registration.m uses grid refinement.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">14 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/47038">Am VR</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thanks a lot DIrk-Jan Kroon.</P>
+
+<P>Your script works really great on our machines. One more thing, my research group has access to a cluster and we'd love to run your alignment program on it.  I was wondering how difficult would it be to change the .c files so that they can also be compiled on Linux.  Any thoughts on this issue?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">15 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Am VR,</P>
+
+<P>It is not that difficult to change the c-code files to work multi-threaded on Linux, it is simply replacing the windows functions such as _beginthreadex  with pthread_create.</P>
+
+<P>The code is now optimized for "shared caches": one thread does the even and another the odd image lines. With separate caches/processors  it will be better to divide the image in several image regions.</P>
+
+<P>When you add a large number of cpu-cores, the memory and the single-threaded Matlab code will be come the bottleneck instead of the cpu power.</P>
+
+<P>---</P>
+
+<P>I hope to release version 12 which uses not 2 but all available cores, and uses a new optimizer FMINLBFGS (also on mathworks) in a few days...</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">25 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/34422">Brett</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>This does not work for arbitrary sized images.  I haven't tried above 256x256 yet, but it won't work for smaller ROIs, I get the following error: 
+<BR>??? Attempted to access O_uniform(3,18,1); index out of bounds because size(O_uniform)=[17,17,2].</P>
+
+<P>Error in ==&gt; bspline_registration_gradient at 164
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;regBx=O_uniform(irp,jrp,1); regBy=O_uniform(irp,jrp,2);</P>
+
+<P>Error in ==&gt;
+<BR>register_images&gt;@(x)bspline_registration_gradient(x,sizes,Spacing/resize_per,imresize(ISmoving,1/resize_per),imresize(ISstatic,1/resize_per),options,MASKmovingsmall,MASKstaticsmall)
+<BR>at 300
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O_trans = resize_per*
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fminlbfgs(@(x)bspline_registration_gradient(x,sizes,Spacing/resize_per,imresize(ISmoving,1/resize_per),imresize(ISstatic,1/resize_per),options,MASKmovingsmall,MASKstatic
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error in ==&gt; fminlbfgs&gt;gradient_function at 729
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[fval, grad]=feval(funfcn,reshape(x,data.xsizes));</P>
+
+<P>Error in ==&gt; fminlbfgs at 154
+<BR>[data,fval,grad]=gradient_function(data.xInitial,funfcn, data, optim);</P>
+
+<P>Error in ==&gt; register_images at 300
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O_trans = resize_per*
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fminlbfgs(@(x)bspline_registration_gradient(x,sizes,Spacing/resize_per,imresize(ISmoving,1/resize_per),imresize(ISstatic,1/resize_per),options,MASKmovingsmall,MASKstatic
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error in ==&gt; example at 9
+<BR>&nbsp;&nbsp;[Ireg,O_trans,Spacing,Bx,By,Fx,Fy] = register_images(Imoving,Istatic);
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">25 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear Brett,</P>
+
+<P>Thank you for the comment, this bug was unfortunately introduced by fixing a bug in the previous update, and is fixed in the update which will be on Mathworks.com today or tomorrow</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">26 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/51054">MUNIER Mederic</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi,</P>
+
+<P>Is the example_3d_affine.m supposed to work on a Matlab 7.1 version ? I encounter some problems while executing the script (segmentation fault).</P>
+
+<P>Thks.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">26 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear MUNIER Mederic,</P>
+
+<P>I never tested my scripts with Matlab version 7.1, but it should work. You can replace the multi-threaded code files with the single threaded files, maybe that will work?</P>
+
+<P>Does the "segmentation fault", happen every time, you call example_3d_affine?, I have checked and tested the code again but couldn't find a bug...</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">26 Mar 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I've tested the code with Matlab version 7.1.
+<BR>With this old Matlab version, you must first replace the word "mwsize" (unsupported type) with "int" in all c-code files, and use a newer compiler than the default LCC.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">06 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/52498">Abdoul-Nasser DJIDO</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>great code, really useful for both starter and advanced ...
+<BR>working very well on MATLAB 7.6 R2008a</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">08 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/51054">MUNIER Mederic</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi,</P>
+
+<P>Indeedn each time I run example_3d_affine, I got a Segmentation violation error. I can copy the last part of the report error here if it can help someone telling me what's wrong with my version or my manipulation :</P>
+
+<P>Error in ==&gt; gui_mainfcn&gt;local_openfig at 216
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;gui_hFigure = openfig(name, singleton, 'auto');</P>
+
+<P>Error in ==&gt; gui_mainfcn at 94
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gui_hFigure = local_openfig(gui_State.gui_Name, gui_SingletonOpt);            </P>
+
+<P>Error in ==&gt; showcs3 at 29
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;gui_mainfcn(gui_State, varargin{:});</P>
+
+<P>Error in ==&gt; example_3d_affine at 19
+<BR>showcs3(I1);</P>
+
+<P>I will try to get a newer version of Matlab from my university, hope it will solve the problem.</P>
+
+<P>Thks a lot for trying to help me.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">08 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/51054">MUNIER Mederic</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Yeah, in fact it seems to crash almost at the very beginning, when trying to show I1 and I2. Which probably leads to a problem with my version of Matlab.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">08 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/52838">charu hans</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Whenever I try to run register_volumes.m on my rgb  images.It gives me following error:</P>
+
+<P>??? Out of memory. Type HELP MEMORY for your options.</P>
+
+<P>Error in ==&gt; fminlbfgs at 140
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;data.deltaX=zeros(data.numberOfVariables,optim.StoreN);</P>
+
+<P>Error in ==&gt; register_volumes at 272
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;O_trans =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;resize_per*fminlbfgs(@(x)bspline_registration_gradient(x,sizes,Spacing/resize_per,imresize3d(ISmoving,1/resize_per,[],'linear','bound'),imresize3d(ISstatic,1/resize_per,[],'linear','bound')</P>
+
+<P>I tried to resize my image to smaller size like  50x50, it still gives me error</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">09 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*MUNIER Mederic  </P>
+
+<P>Your segmentation fault when the affine transformation example shows the 3D data is caused by the fact that GUI's created by new Matlab versions are not 100% compatible with older Matlab versions, even if you set your save settings to an older setting.</P>
+
+<P>Only solution is to not use show3d and use a simple imshow to show a slice, or upgrade to a recent Matlab version</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">14 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/53355">Ali B</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dirk-Jan, thanks for sharing your code. 
+<BR>I have a pretty basic question. 
+<BR>I am trying to use the B-spline FFD part (bspline_transform.m) of your code for image morphing. More specifically, I am trying to find out how I can change transformation grid to manipulate a picture.
+<BR>Transformation grid determines where each of the control points of the new image should be. is that right?
+<BR>You have mentioned that you've used Fumihiko Ino et al. paper. Just wondering if you have used the same x and y directions mentioned in that paper (meaning (x,y)=(0,0) as the lower left corner of image). 
+<BR>thanks a lot.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">14 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/51054">MUNIER Mederic</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thanks, it perfectly works on a Matlab R2007a version.</P>
+
+<P>Med.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">14 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>* alib B,</P>
+
+<P>I use the left-top of the image as (0,0) coordinate, and the transformation is done backwards.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">20 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/54156">Gerald Lodron Lodron</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>is it possible to add a funcitonality that crop the transformed image in movepixels? If I rotate an image via the ffd the images becomes smaller...</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">20 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/54156">Gerald Lodron Lodron</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>is it possible to add a funcitonality that crop the transformed image in movepixels? If I rotate an image via the ffd the images becomes smaller...and I think the result becomes completely wrong at rotations &gt;40 degrees
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">20 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/54156">Gerald Lodron Lodron</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>and I think the result becomes completely wrong at rotations &gt;40 degrees </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">26 Apr 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/54984">Luca</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear Dirk
+<BR>your code is so usefull for my M.s thesis and I,m enjoying it.
+<BR>but I was wondering if I could just optimize the objective functions using some optimization methods like PSO,...
+<BR>but when I try this specially in non-rigid transformation I cant do ie well.
+<BR>infact, I dont know how to use these objective functions(i.e affine_registration_image in affine transform and bspline_registration_gradient in non-rigid)?
+<BR>would you please post an example of their optimization using PSO?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">02 Jun 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59236">aya b</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi
+<BR>I encountered a compilation problem, which seems different than the ones already posted:</P>
+
+<P>Writing library for bspline_transform_3d_single.mexw32 
+<BR>c:\docume~1\admini~1\locals~1\temp\mex_vrmztx\bspline_transform_3d_single.obj .text: undefined reference to '_floorf' 
+<BR>&nbsp;
+<BR>&nbsp;&nbsp;C:\PROGRA~1\MATLAB\R2008A\BIN\MEX.PL: Error: Link of 'bspline_transform_3d_single.mexw32' failed. </P>
+
+<P>I'm using matlab 2008a</P>
+
+<P>Thanks!
+<BR>Aya</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">02 Jun 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>* aya b
+<BR>Thank you for your comments, I fixed this LCC compiler error in release of today. 
+<BR>(you can also install the last lcc compiler or use another compiler)</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">03 Jun 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59236">aya b</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>It worked - thanks!
+<BR>Is there help somewhere? or should I use the examples?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">03 Jun 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59236">aya b</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi
+<BR>I'm sorry for all these questions, but I encountered another problem - I tried to run the example_nonrigid_3d example and got the following output:
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iteration  Func-count   Grad-count         f(x)         Step-size
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0           1           1            0.048856    
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1           4           2           0.0488542               5
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2           7           3           0.0488539               1
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3          10           4           0.0488535               1
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4          13           5           0.0488532               1
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;Optimizer Results
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm Used: limited memory BFGS (L-BFGS)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit message : Number of iterations exceeded options.MaxIter or number of function evaluations exceeded options.FunEvals.
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iterations : 5
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Function Count : 16
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum found : 0.048853
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intern Time : 0.1239 seconds
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Time : 2884.6883 seconds
+<BR>??? Index exceeds matrix dimensions.</P>
+
+<P>Error in ==&gt; refine_grid at 111
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;O_new=O_new(1:size(X,1),1:size(X,2),1:size(X,3),1:3);</P>
+
+<P>Error in ==&gt; example_3d_nonrigid at 51
+<BR>[O_trans,Spacing]=refine_grid(O_trans,Spacing,size(I1));</P>
+
+<P>Do I need to change any params?
+<BR>Thanks again,
+<BR>Aya</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">06 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59849">christos</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>very nice code... there are some issues though</P>
+
+<P>a)
+<BR>regarding the masks, could you please confirm what their structure should be? Is it just an image that contains 0s and 1s (where 0s correspond to areas to be masked out) </P>
+
+<P>b)
+<BR>should the images to be registered be the same size? I also see that at some point in register_images.m you resize the moving image to have the same size with static... fair enough... you don't do this for the masks and I think the system complains about this</P>
+
+<P>c)
+<BR>In image_difference.m </P>
+
+<P>RE: (lines 243-252) 
+<BR>% Remove unmasked pixels
+<BR>if(~isempty(Mask)),
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;sizes=size(V);
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;V=V(:); 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;V(~Mask)=[]; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;V=reshape(V,sizes);
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;U=U(:);
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;U(~Mask)=[]; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;U=reshape(U,sizes);
+<BR>end</P>
+
+<P>I don't understand how is it possible to expect, if you remove the masked pixels,  to be able to reshape U or V to the same size prior to the pixel removal? A 32x32 image (vectorized 1024x1). Your remove lets say 5 pixels from the vector - now 1019x1, and then you ask it to be reshaped back to 32x32
+<BR>(my version at least complains)</P>
+
+<P>could you please elaborate on the usages of masks and if they have been tested?</P>
+
+<P>----</P>
+
+<P>thanks alot for your time and effort and for sharing this with us</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">11 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/32543">Jan Van den Bulcke</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Is it possible to do a straightforward rigid-body registration or can the non-rigid code cope with that?</P>
+
+<P>Jan.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">11 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/32543">Jan Van den Bulcke</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Sorry</P>
+
+<P>Yes it can, of course, by reading the help. I apologize.</P>
+
+<P>Jan.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">14 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*christos
+<BR>Sorry a little late, but yesterday I had time to work on my b-spline registration method.</P>
+
+<P>Your 1th question, must masks be zero and ones?:
+<BR>No the mask is just multiplied with the error image from the similarity measure, before summing up all errors. There is one exception mutual information, in which elements which are zero are simply discarded before calculation of the mutual information value. </P>
+
+<P>2th, must images be the same size? :
+<BR>Yes, they must be the same size also the masks. I fixed the  mask resize bug you mentioned in version 17a which will probably be accepted by Mathworks this evening.</P>
+
+<P>3th, Code image_difference reshape?:
+<BR>This is an bug, I fixed it in version 17</P>
+
+<P>4th , Mask are they already been tested?:
+<BR>Only the 2D masks. I developed the masks to register the backgrounds of an angiogram, in which I masked out the coronary artery in the images. After registration of the backgrounds I subtracted them from the original movie to make the coronary artery better visible.</P>
+
+<P>Thank you for your comments, and bug report.
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">15 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/63617">lajulajay</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi, whenever I try using landmarks I get a matrix multiplication error:</P>
+
+<P>*******************************************************************************
+<BR>??? Error using ==&gt; times
+<BR>Matrix dimensions must agree.</P>
+
+<P>Error in ==&gt; affine_registration_error&gt;affine_point_error at 255
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;errordis=sum(distance.*PStrength);</P>
+
+<P>Error in ==&gt; affine_registration_error&gt;affine_registration_error_2d at 161
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;e=e+affine_point_error(M,I1,Points1, Points2, PStrength);</P>
+
+<P>Error in ==&gt; affine_registration_error at 107
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;e=affine_registration_error_2d(par,I1,I2,type,O_trans,Spacing,MaskI1,MaskI2,Points1,Points2,PStrength);</P>
+
+<P>Error in ==&gt;
+<BR>register_images&gt;@(x)affine_registration_error(x,scale,ITmoving,ITstatic,type,O_trans,Spacing,MASKmoving,MASKstatic,Points1t,Points2t,PStrengtht)</P>
+
+<P>Error in ==&gt; fminlbfgs&gt;gradient_function at 729
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[fval, grad]=feval(funfcn,reshape(x,data.xsizes));</P>
+
+<P>Error in ==&gt; fminlbfgs at 154
+<BR>[data,fval,grad]=gradient_function(data.xInitial,funfcn, data, optim);</P>
+
+<P>Error in ==&gt; register_images at 230
+<BR>	x=fminlbfgs(@(x)affine_registration_error(x,scale,ITmoving,ITstatic,type,O_trans,Spacing,MASKmoving,MASKstatic,Points1t,Points2t,PStrengtht),x,optim);
+<BR>*******************************************************************************</P>
+
+<P>I am using three landmark points; i.e. Points1 and Points2 are 3 by 2 matrices and PStrength is a 3 by 1 matrix.</P>
+
+<P>Thanks.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">23 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Dirk,
+<BR>I want to nonrigidly register two .nii volumes, but register_volumes cammand doesn't accept this format. Could you please tell me what formats it accepts.</P>
+
+<P>Siamak  
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="3">
+            <DIV style="width:60%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">24 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*siamak,
+<BR>You can find "Tools for NIfTI" on the Mathwork file-exchange. Those tools can be used to load your data in Matlab, and save the registration data afterward ...</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">28 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Drik,</P>
+
+<P>I want to use some options in the regsitration. How can I put the options in the command line:
+<BR>image_r= register_volumes(image1, image2, options);
+<BR>How can I set options in the command line?
+<BR>Could you please write for me an example of using Affine registration as an option.</P>
+
+<P>Thanks,
+<BR>Siamak</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">29 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Drik,</P>
+
+<P>I srossed out my previous mistake. It was a mistake in creating Options structure. However, I did a simple rigid registration between to MRI images. When I see the result, Ireg, it is completely corrupted, half part is white, half part is a bright MRI image. Is there any this that I am not setting. I checked the input images, both of them are int16, the same as result. Any help is highly appreciated.    </P>
+
+<P>Siamak</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">29 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Drik,</P>
+
+<P>I encountered another problem in registration_volumes. When I run this command:
+<BR>Ireg= register_volumes(vol1, vol1, Options) That:
+<BR>Options.Registration= 'Affine', all of the voxels of the output volume are zero.</P>
+
+<P>Siamak 
+<BR>;
+<BR>I am using a 3-D volume and try to </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">30 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear Siamak,</P>
+
+<P>The problem is that you use int16 as datatype, if you convert it to double or single with im2single or im2double, it will probably just work fine. 
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">30 Jul 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Drik,</P>
+
+<P>Thanks for your comment. There is a typo in the help part of image_difference.m file.  When I run "help image_difference", in the example section I see:
+<BR>[t,I]=registration_error(I1, I2, 'sd');
+<BR>It shold be changed to:
+<BR>[t,I]=image_difference(I1, I2, 'sd');</P>
+
+<P>Siamak
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">03 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Drik,</P>
+
+<P>I have some questions related to register_volumes program:
+<BR>1. Is it possible to generate the affine matrix or warp file of transformation when registering two images?
+<BR>2. is it possible to reduce the run time of nonrigid registration using some parameters? 
+<BR>3. For nonrigid registration using a mask, How I can set the "Options.maskMoving". I tried several times using any sort of mask file type with the same dimention, but didn't work.</P>
+
+<P>Siamak Yousefi </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">04 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>* Siamak Yousefi 
+<BR>1 : The (inverse) Affine Matrix is returned as variable "M" if you use the latest version (18)
+<BR>2 : It is faster to already set:
+<BR>-  the 'similarity' option
+<BR>-  not use all outputs but only [Ireg,Grid,Spacing,M]
+<BR>-  do less refinements option 'MaxRef'
+<BR>-  Gaussian filter your images with imfilter and fspecial to remove noise, before starting the registration.</P>
+
+<P>The fastest: is using no Mask, no Landmarks, in combination with 'sd' as similarity measure, because than it uses optimized gradient mex functions named bspline_error.</P>
+
+<P>3 : Do you use version 18?, otherwise I'll try to find the bug.</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">04 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thanks for you comments. I am using version 18 still have a problem using mask.</P>
+
+<P>Siamak</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">05 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>* siamak yousefi 
+<BR>I have uploaded a new version which I've tested with masks, will probably be online tomorrow.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">05 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/64403">siamak yousefi</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>hank you very much Drik.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">12 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/31883">jichao zhao</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>When I used  the function "showcs3", my input images are pure black
+<BR>and white, but when I used matlab built-in fucntion imagesc, I can see my images are gray color instead of pure black and white. Also when I use colormap, I can see the color ranges from 0 to 60. So my question is that why my images are pure black-white when plotted using showcs3 and whether it influences results of registration or not. Many thanks. If you need, I can send you my image data.  thanks, jichao</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">12 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*jichao zhao
+<BR>showcs3 always uses the default Matlab image ranges, thus if a double or single it sets black to 0 and white to 1, and if uint8 black to 0 and white to 255. 
+<BR>That your image range is 0 to 60 instead of 0 to 1 will influence registration, because the pixel based penalty will now be larger in comparison to  the smoothness penalty.
+<BR>I almost always normalize my data to range [0..1] by V=V-min(V(:)); V=V./max(V(:));</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">12 Aug 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/31883">jichao zhao</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>many thanks for your reply. </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">16 Sep 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/57104">zhang xu</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I'm currently working on this subject, can you point some related resource or important papers to me.
+<BR>Thank you!</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">18 Sep 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/65664">ff dfds</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>yeha,it's a excellent work! thanks,Dirk-Jan Kroon</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating" title="5">
+            <DIV style="width:100%;
+              ">
+            </DIV>
+          </DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">22 Sep 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/70000">James Ford</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I get a different compile error under Linux -- redefinition of a function. I think it's a typo in the code... in bspline_error_2d_double.c, you have</P>
+
+<P>(line 150)
+<BR>#ifdef _WIN32
+<BR>&nbsp;&nbsp;unsigned __stdcall transformvolume_error_color(double **Args) {
+<BR>#else
+<BR>&nbsp;&nbsp;void transformvolume_error_color(double **Args) {
+<BR>#endif</P>
+
+<P>and later
+<BR>(line 485)
+<BR>#ifdef _WIN32
+<BR>&nbsp;&nbsp;unsigned __stdcall transformvolume_gradient_color(double **Args) {
+<BR>#else
+<BR>&nbsp;&nbsp;void transformvolume_error_color(double **Args) {
+<BR>#endif</P>
+
+<P>Those function names should match on both?</P>
+
+<P>After I change this, it compiles but doesn't link. :-(</P>
+
+<P>&gt;&gt; compile_c_files
+<BR>compiling : bspline_error_2d_double.c
+<BR>image_interpolation.o: In function `mindex2':
+<BR>image_interpolation.c:(.text+0x0): multiple definition of `mindex2'
+<BR>bspline_error_2d_double.o:bspline_error_2d_double.c:(.text+0x0): first defined here</P>
+
+<P>and 8-10 more like that.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">30 Sep 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*James Ford,</P>
+
+<P>Thank you, for the comments.</P>
+
+<P>I've made some improvements, fixed the bugs you pointed out and tested the code in Ubuntu, new version is probably online tomorow.</P>
+
+<P>Dirk-Jan Kroon</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">06 Oct 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/57683">Xi Liang</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear Dirk,</P>
+
+<P>The volume I want to show is very noisy, and by using the function of "showcs3", the images appear to be much less noisy. I assume there are certain kind of filter used. Would you please roughly point out where it is in the code?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">06 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/75467">Hui</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi, Dirk,</P>
+
+<P>Thanks for sharing the excellent codes.
+<BR>I have two questions about your version18e codes:</P>
+
+<P>1.  In image_difference.m, line 34, if(exist('type','var')==0), type='p'; end. should here type = 'd' as default? Because there is no type 'p' </P>
+
+<P>2. In example_2d_affine.m, can you explain a little bit about why the scale = [1 1 1 0.1 0.1] needed here? I didn't figure out the purpose of scale here.</P>
+
+<P>Thanks very much.</P>
+
+<P>Hui</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">09 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Dear Hui,</P>
+
+<P>(1) Indeed 'p' doesn't exist, I will replace it with 'd' in the next update.</P>
+
+<P>(2)
+<BR>The scaling [1 1 1 0.1 0.1] is because the parameters are [translateX translateY rotate resizeX resizeY]. If you change the size of the image only a little bit it will produce large pixel movements. An optimizer produces the best result if all parameters have approximately the same influence on the image transformation, thus we introduced the scaling.</P>
+
+<P>Dirk-Jan Kroon</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">11 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/75936">Chao Li</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Dirk,</P>
+
+<P>excellent code.
+<BR>One trivial thing I'd like to report is that:
+<BR>in deciding max refinements steps (e.g., line 255 in 'register_image.m, Version18e'), its better to define the lower bound of MaxItt to account for small images.</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">23 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59849">christos</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>you need to put t=0 if the expression in the if does not stand</P>
+
+<P>if( isempty(Mask) | (~isempty(Mask)  &amp; ~isempty(find(Mask~=0) ) ) )
+<BR>&nbsp;
+<BR>&nbsp;&nbsp;&nbsp;%your code  
+<BR>&nbsp;&nbsp;&nbsp;if(size(U,3)==3),
+<BR>&nbsp;&nbsp;&nbsp;.....
+<BR>&nbsp;&nbsp;&nbsp;end
+<BR>else
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;t = 0;
+<BR>end</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">24 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/59849">christos</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I ve sent two posts but the first did not show up.
+<BR>RE: my post on 23 NOV 09</P>
+
+<P>If one of the sub-regions in b-spline registration corresponds to a totally masked out part of the image  (hence the mask is not empty but populated only by zeros), then the image_difference in the MI returns an NaN value.</P>
+
+<P>As a workaround you can probably check for this case and simply set the image similarity to 0 for these regions. See previous post for the exact if statement</P>
+
+<P></P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">24 Nov 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*Christos</P>
+
+<P>Thank you for your bug report, I will try to fix them in the next code update. </P>
+
+<P>Best regards, Dirk-Jan</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">04 Dec 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/76292">Alex Kararg</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I am getting this error when i try to run example3d_non_rigid.m : "Undefined function or variable 'maxNumCompThreads' " I run matlab 2007a. I compiled successfully. </P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">05 Dec 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>*Alex Kararg,
+<BR>The function maxNumCompThreads is a build-in function which returns the number of cores in the computer. If it doesn't exist in your Matlab you simply create the function your self like:</P>
+
+<P>function a=maxNumCompThreads()
+<BR>a=2;
+</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">16 Dec 2009</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/76292">Alex Kararg</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Thank you for your reply. I upgraded to the newest version of Matlab and it works.</P>
+
+<P>However, I would like to ask you this simple question. I have two volumes V1 (sphere) and V2 (cube). V2 is smaller than V1. I am using the "registervolumes.m" to register V2 over V1 . The output shows the final registered volumes and that is only the sphere. My question is how I could access volume V2 as it deforms to V1 on each iteration. </P>
+
+<P>Thank you!</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">13 Jan 2010</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Note: bug in manually_warp_images (will be fixed in next update).</P>
+
+<P>Replace line 279 with:
+<BR>[j,i]=ind2sub([size(data.Grid,2) size(data.Grid,1)],data.pointselected);</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR class="odd">
+      <TD class="date"><SPAN class="date">09 Feb 2010</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/43554">winnie</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>Hi Dirk,</P>
+
+<P>I have just been trying to register an image to a template using your script, but unfortunately it did not work. I used all the default options. Here is a summary of the output:</P>
+
+<P>Start Affine part of Non-Rigid registration
+<BR>...
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;Optimizer Results
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm Used: limited memory BFGS (L-BFGS)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit message : Change in the objective function value was less than the specified tolerance TolFun.
+<BR>... (repeat twice)</P>
+
+<P>Start non-rigid b-spline grid registration
+<BR>Current Grid size : 7x7
+<BR>...
+<BR>Optimizer Results
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm Used: limited memory BFGS (L-BFGS)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit message : Change in the objective function value was less than the specified tolerance TolFun.
+<BR>...
+<BR>Registration Refinement
+<BR>Current Grid size : 11x11
+<BR>...
+<BR>Optimizer Results
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm Used: limited memory BFGS (L-BFGS)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit message : Line search cannot find an acceptable point along the current search
+<BR>...
+<BR>Registration Refinement
+<BR>Current Grid size : 19x19
+<BR>...
+<BR>Optimizer Results
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm Used: limited memory BFGS (L-BFGS)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit message : Line search cannot find an acceptable point along the current search</P>
+
+<P>Then the program quits without doing any registration, as far as I can tell. I was just wondering whether you had any suggestions that I might try. For example, could I increase the specified tolerance TolFun somehow?</P>
+
+<P>Thanks, Winnie</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+    <TR>
+      <TD class="date"><SPAN class="date">11 Mar 2010</SPAN></TD>
+      <TD>
+        <SPAN class="author">
+        
+          <A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/85305">medical imaging Ibrahim</A>
+        
+        </SPAN>
+      </TD>
+      <TD><SPAN class="comment"><P>I have used this implementation as a step in one of my analysis systems, could you please tell me the paper that I should reference for this work ?</P></SPAN></TD>
+      <TD width="80">
+        
+          <DIV class="starrating commentonly" title="Comment only" align="center"></DIV>
+        
+      </TD>
+    </TR>
+  
+</TBODY></TABLE>
+           </DIV>
+              
+  
+        <A name="comments"></A>
+                <TABLE cellpadding="0" cellspacing="0" class="fileview inlineform">
+          
+          
+            <TBODY><TR>
+              <TD>
+                <A href="https://www.mathworks.com/accesslogin/index_fe.do?uri=http://www.mathworks.com/matlabcentral/fileexchange/20057-non-rigid-b-spline-grid-image-registration">Please login</A> to add a comment or rating.
+              </TD>
+            </TR>
+          
+        </TBODY></TABLE>
+      
+        
+  			
+        
+          <TABLE cellpadding="0" cellspacing="0" border="0" class="fileview section">
+            <TBODY><TR class="title">
+              <TH colspan="2"><SPAN class="heading">Updates</SPAN></TH>
+            </TR>
+            
+              <TR>
+                <TD class="date">27 May 2008</TD>
+                <TD><P>10x times faster version, and 3d beta code.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">28 May 2008</TD>
+                <TD><P>Added 3D matlab files...</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">17 Jul 2008</TD>
+                <TD><P>Updated example code, and some function interface improvements.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">18 Jul 2008</TD>
+                <TD><P>Improved example code and interface updates</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">01 Aug 2008</TD>
+                <TD><P>All functions are rewritten to be used with the Matlab optimization methods.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">20 Aug 2008</TD>
+                <TD><P>Fixed NaN bug, which occurred in case of a grid cell size of zero.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">02 Oct 2008</TD>
+                <TD><P>Major bug fixes in 3D error gradient code, speed ups, out of the box registration</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">13 Oct 2008</TD>
+                <TD><P>Added registration smoothness penalty.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">31 Oct 2008</TD>
+                <TD><P>Bug fixed: The rigid transformation optimizers crashed with images with strange dimensions</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">24 Feb 2009</TD>
+                <TD><P>2D available in 100% Matlab code. Eulerian strain images available. Parts of images can be masked. Forward transformation field now also available.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">04 Mar 2009</TD>
+                <TD><P>Single Threaded files are updated to all code in the Multiple Threaded files, and tested...</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">16 Mar 2009</TD>
+                <TD><P>Multi-threaded registration now uses the number of threads set by maxNumCompThreads. New Quasi newton optimizer fminlbfgs. Speed ups in the smoothness penalty, and some other files.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">19 Mar 2009</TD>
+                <TD><P>Fixed a bug: The moving grid was used to determine the region influenced by a control point in gradient registration, this is changed in a uniform static grid. (b-splines are always determined on a uniform grid).</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">20 Mar 2009</TD>
+                <TD><P>Changed parameter "size of region influenced by a control point" in final refinement step. Resulting in a speed up of 150% in gradient calculation in this last step.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">24 Mar 2009</TD>
+                <TD><P>Bug fixed in image dimensions in backwards2forward c-code and updated movepixels files to allow pixels outside image to be zero or nearest value inside image.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">25 Mar 2009</TD>
+                <TD><P>Fixed out of bounds bug, reported by D.C. Karhoff</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">14 Apr 2009</TD>
+                <TD><P>Landmarks can now be used as transformation regularization.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">15 Apr 2009</TD>
+                <TD><P>Added 2D RGB image support</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">26 May 2009</TD>
+                <TD><P>Speed up affine 3D registration (2x), and some other small improvements.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">27 May 2009</TD>
+                <TD><P>";" removed to fix a boundary bug</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">29 May 2009</TD>
+                <TD><P>Tri Ngo provided me with Linux multi-threaded code, which I added, thus the registration now supports multi-threaded Windows, Linux and (Mac Os)? 
+<BR>Also fixed last ; bug ...</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">02 Jun 2009</TD>
+                <TD><P>Bug LCC compiler doesn't link floorf fixed. Also fixed NaN bug in image_difference.m</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">04 Jun 2009</TD>
+                <TD><P>example 3d nonrigid fixed</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">13 Jul 2009</TD>
+                <TD><P>Added Cubic interpolation!, fixed bug and comment in masks mutual information, interpolation now in separate file c. file</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">14 Jul 2009</TD>
+                <TD><P>Minor bug, Mask is now resized to fit size Istatic (if not already).</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">15 Jul 2009</TD>
+                <TD><P>Bug fixed in index 3D cubic interpolation, resulted in zero resulting volumes</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">15 Jul 2009</TD>
+                <TD><P>Major bug z-dimension fixed in volume registration</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">27 Jul 2009</TD>
+                <TD><P>Major code speed up by look up tables and separate SDD code. Also some bug Fixes in Mask code...</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">05 Aug 2009</TD>
+                <TD><P>Solved mask bug reported by siamak yousefi.
+<BR>Also changed default smoothness penalty from 0.001 to 0.01 , which is probably better for most applications.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">14 Aug 2009</TD>
+                <TD><P>Fixed Single cubic interpolation bug, and addpaths.m in low_level_examples</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">08 Sep 2009</TD>
+                <TD><P>Fix Gaussian filter function</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">28 Sep 2009</TD>
+                <TD><P>Fixed bug, 3D registration empty Fx and Fz matrix.</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">30 Sep 2009</TD>
+                <TD><P>Fixes for Linux Compiler</P></TD>
+              </TR>
+            
+              <TR>
+                <TD class="date">11 Jan 2010</TD>
+                <TD><P>Added manually_warp_images function. Now uses localized mutual information for the error calculation,  not only for the gradient of the error. Split register_images and register_volumes in sub-functions.</P></TD>
+              </TR>
+            
+          </TBODY></TABLE>
+        
+        
+        <DIV id="tag_details">
+          
+  <TABLE cellpadding="0" cellspacing="0" id="tag_details" border="0" class="fileview datatable_full">
+    <TBODY><TR>
+      <TH colspan="3" class="tabletools-top lower left"><SPAN class="heading">Tag Activity for this File</SPAN></TH>
+    </TR>
+    <TR>
+      <TH>Tag</TH>
+      <TH>Applied By</TH>
+      <TH>Date/Time</TH>
+    </TR>
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22geometric+transformation%22" rel="nofollow">geometric transformation</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22image+registration%22" rel="nofollow">image registration</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22registration%22" rel="nofollow">registration</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22bspline%22" rel="nofollow">bspline</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%222d%22" rel="nofollow">2d</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22nonrigid%22" rel="nofollow">nonrigid</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22elastic%22" rel="nofollow">elastic</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22landmarks%22" rel="nofollow">landmarks</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22c+mex%22" rel="nofollow">c mex</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%223d%22" rel="nofollow">3d</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>22 Oct 2008 10:03:32</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%222d%22" rel="nofollow">2d</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/31821">Cristina McIntire</A></TD>
+        <TD>10 Nov 2008 10:52:23</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%223d%22" rel="nofollow">3d</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/31821">Cristina McIntire</A></TD>
+        <TD>10 Nov 2008 10:52:25</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22image%22" rel="nofollow">image</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/31821">Cristina McIntire</A></TD>
+        <TD>10 Nov 2008 10:52:28</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22nonrigid%22" rel="nofollow">nonrigid</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/43398">Hu Jun</A></TD>
+        <TD>24 Jan 2009 20:54:21</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22registration%22" rel="nofollow">registration</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/43398">Hu Jun</A></TD>
+        <TD>24 Jan 2009 20:56:59</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22bspline%22" rel="nofollow">bspline</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/43398">Hu Jun</A></TD>
+        <TD>24 Jan 2009 20:57:14</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22free+form+deformation%22" rel="nofollow">free form deformation</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>24 Feb 2009 16:26:02</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22mutual+information%22" rel="nofollow">mutual information</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>24 Feb 2009 16:26:03</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22strain+tensor%22" rel="nofollow">strain tensor</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>24 Feb 2009 16:26:03</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22transformation+field%22" rel="nofollow">transformation field</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>24 Feb 2009 16:26:03</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22eulerian+strain%22" rel="nofollow">eulerian strain</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>24 Feb 2009 16:26:03</TD>
+      </TR>   
+    
+      <TR>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22affine%22" rel="nofollow">affine</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>17 Mar 2009 14:06:06</TD>
+      </TR>   
+    
+      <TR class="odd">
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/?term=tag%3A%22rigid%22" rel="nofollow">rigid</A></TD>
+        <TD><A href="http://www.mathworks.com/matlabcentral/fileexchange/authors/29180">Dirk-Jan Kroon</A></TD>
+        <TD>17 Mar 2009 14:06:07</TD>
+      </TR>   
+    
+  </TBODY></TABLE>
+
+    
+        </DIV>        
+      </TD>
+    </TR>
+  
+  </TBODY></TABLE>
+
+<P id="contactus">Contact us at <A href="mailto:files@mathworks.com">files@mathworks.com</A></P>
+
+      <!-- START OF GLOBAL FOOTER -->
+      </DIV>
+<!-- footer.html -->
+<DIV class="clearboth">&nbsp;</DIV>
+      <DIV id="footer">
+<SCRIPT type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</SCRIPT>
+        <DIV class="wrapper">
+          <DIV>
+          	
+             <UL id="mathworks">
+                   <LI class="first">Featured MathWorks.com Topics:</LI>
+                   <LI><A href="http://www.mathworks.com/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_new&#39;)">New Products</A></LI>
+                   <LI><A href="http://www.mathworks.com/support/" title="support" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_support&#39;)">Support</A></LI>
+                   <LI><A href="http://www.mathworks.com/access/helpdesk/help/helpdesk.html" title="documentation" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_doc&#39;)">Documentation</A></LI>
+                   <LI><A href="http://www.mathworks.com/services/training/" title="training" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_training&#39;)">Training</A></LI>
+                   <LI><A href="http://www.mathworks.com/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_webinars&#39;)">Webinars</A></LI>
+                   <LI><A href="http://www.mathworks.com/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_newsletters&#39;)">Newsletters</A></LI>
+                   <LI><A href="http://www.mathworks.com/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</A></LI>
+                   <LI><A href="http://www.mathworks.com/company/jobs/" title="Careers" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_careers&#39;)">Careers</A></LI>
+                </UL>
+                  <UL id="matlabcentral">
+                        <LI class="copyright first">© 1994-2010 The MathWorks, Inc.</LI>
+                        <LI><A href="http://www.mathworks.com/help.html" title="Site Help">Site Help</A></LI>
+                        <LI><A href="http://www.mathworks.com/company/aboutus/policies_statements/patents.html" title="patents" rel="nofollow">Patents</A></LI>
+                        <LI><A href="http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html" title="trademarks" rel="nofollow">Trademarks</A></LI>
+                        <LI><A href="http://www.mathworks.com/company/aboutus/policies_statements/" title="privacy policy" rel="nofollow">Privacy Policy</A></LI>
+                        <LI><A href="http://www.mathworks.com/company/aboutus/policies_statements/piracy.html" title="preventing piracy" rel="nofollow">Preventing Piracy</A></LI>
+                        <LI><A href="http://www.mathworks.com/company/rss/" title="RSS" rel="nofollow">RSS</A></LI>
+                        <LI><A href="http://www.mathworks.com/matlabcentral/disclaimer.html" title="Terms of Use" rel="nofollow">Terms of Use</A></LI>
+                  </UL>           
+            </DIV>
+          </DIV>    
+        </DIV>      </DIV>
+    </DIV>
+  
+
+<!-- END OF GLOBAL FOOTER -->
+
+      
+      
+<!-- SiteCatalyst code version: H.4. -->
+<SCRIPT language="JavaScript" src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/s_code.js" type="text/javascript"></SCRIPT><IMG name="s_i_mathmain" height="1" width="1" border="0" alt="">
+<SCRIPT language="JavaScript" type="text/javascript"><!--
+s.pageName=document.title
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></SCRIPT><IMG name="s_i_mathglobal" height="1" width="1" border="0" alt="" src="./MATLAB Central - File detail - non-rigid b-spline grid image registration_files/s38358845841139">
+<SCRIPT language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></SCRIPT><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.4. -->
+
+    
+
+
+</BODY></HTML>
