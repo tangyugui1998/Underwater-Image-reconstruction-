@@ -41,7 +41,7 @@ for indexLoops=1:5
         frames(:,:,indexImages) = reg_noblur;
     end
     Means(:,:,indexLoops+1) = mean(frames,3);
-    outfile = ['middle' sprintf('%d',indexLoops)];
+    outfile = ['middle' sprintf('%d',indexLoops)]; % Set name of outfile
     frames(frames>1)=1;
     frames(frames<0)=0;
     writeOutput1(outputFolder, frames, outfile);
